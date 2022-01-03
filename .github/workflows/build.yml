@@ -18,8 +18,8 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v1 
       with: 
-        username: ${{ secrets.jussi100 }}
-        password: ${{ secrets.c33be4e0-e503-4c15-bdc1-cf40d0877b7f }}
+        username: ${{ secrets.rrr }}
+        password: ${{ secrets.rrr }}
             
     # Builds devopsdockeruh/docker-hy.github.io
     - name: Build and push
