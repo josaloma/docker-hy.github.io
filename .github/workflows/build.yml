@@ -19,7 +19,7 @@ jobs:
       uses: docker/login-action@v1 
       with: 
         username: ${{ secrets.jussi100 }}
-        password: ${{ secrets.1715be0b-8180-4707-ba5d-fb69a353b230 }}
+        password: ${{ secrets.c33be4e0-e503-4c15-bdc1-cf40d0877b7f }}
             
     # Builds devopsdockeruh/docker-hy.github.io
     - name: Build and push
