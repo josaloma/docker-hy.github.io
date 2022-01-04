@@ -28,10 +28,11 @@ jobs:
         push: true
         tags:  jussi100/coursepage:latest
 
-    - uses: actions/checkout@v2
-    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "ex31" #Must be unique in Heroku
-          heroku_email: "jussisalomaa@hotmail.com"
-          usedocker: true
+    - name: Herokuun
+      uses: actions/checkout@v2
+      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "ex31" #Must be unique in Heroku
+        heroku_email: "jussisalomaa@hotmail.com"
+        usedocker: true
