@@ -5,6 +5,8 @@ on:
   push:
     branches: 
       - master
+     tags:
+      - 'v*'
 
 # Job called build runs-on ubuntu-latest
 jobs:
@@ -26,12 +28,12 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags:  jussi100/coursepage:latest
-            
-    - name: Deploy Heroku
-      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "ex31" #Must be unique in Heroku
-          heroku_email: "jussisalomaa@hotmail.com"
-          usedocker: true
+        tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/coursepage:latest
+ #           
+  #  - name: Deploy Heroku
+  #    uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+  #      with:
+  #        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+   #       heroku_app_name: "ex31" #Must be unique in Heroku
+   #       heroku_email: "jussisalomaa@hotmail.com"
+  #        usedocker: true
