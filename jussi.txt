@@ -2,3 +2,5 @@ muutos tiedostoon ja sitten push githubbiin
 
 uusi testi saadaanko docker hubiin uusi versio
 
+
+Menikö rikki vai toimiiko vielä?
