@@ -26,7 +26,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/coursepage:latest
+        tags:  jussi100/coursepage:latest
  #           
   #  - name: Deploy Heroku
   #    uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
